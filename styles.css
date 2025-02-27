@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #00b4d8;
+  font-family: sans-serif;
+}
+.margin {
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 60rem;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+input {
+  border-radius: 50px;
+  padding: 0.6rem 1.6rem;
+  font-size: 1.5rem;
+  border: none;
+  color: #333;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  background-color: inherit;
+}
+
+.location {
+  position: relative;
+  width: 70%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 50px;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+}
+.icon:hover {
+  transform: scale(1.15);
+}
+.btn {
+  padding: 0 1rem;
+  width: 5rem;
+  height: 3rem;
+  border-radius: 50px;
+  border: none;
+  background-color: #fff;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  transition: all 0.2s ease;
+}
+.btn:hover {
+  background-color: #e9ecef;
+}
+.city {
+  font-size: 2.5rem;
+  margin-top: 4rem;
+}
+
+.weather-icon {
+  width: 16rem;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.temperature {
+  font-size: 4.5rem;
+}
+
+.weather-info {
+  margin-top: 5rem;
+  max-width: 60rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.humidity-img,
+.wind-img {
+  width: 6rem;
+  justify-self: right;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.humidity,
+.wind {
+  font-size: 1.8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 41rem) {
+  html {
+    font-size: 87.5%;
+  }
+}
+@media (max-width: 36rem) {
+  html {
+    font-size: 75%;
+  }
+  .weather-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+@media (max-width: 32rem) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (max-width: 24rem) {
+  html {
+    font-size: 50%;
+  }
+}

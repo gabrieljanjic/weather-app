@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="weather-64.png">
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- stavit icon u url -->
+  </head>
+  <body>
+    <div class="margin">
+
+      <div class="main-container">
+        <div class="location">
+          <input type="text" placeholder="Enter a city" id="city-input"/>
+          <button class="btn">
+            <ion-icon class="icon" name="search-outline" id="city-search-btn"></ion-icon>
+          </button>
+        </div>
+        <h2 class="city-value city  hidden">Zagreb</h2>
+        <img src="#" class="weather-icon hidden" alt="weather image"/>
+        <p class="temperature  hidden"><span class="temperature-value">45</span>°C</p>
+        
+        <div class="weather-info hidden">
+          <img src="humidity.png" class="humidity-img" alt="humidity image"/>
+          <div class="humidity-wind-scape">
+            <h3>Humidity</h3>
+            <p class="humidity"><span class="humidity-value">35</span>%</p>
+          </div>
+          <img src="wind.png" class="wind-img" alt="wind image"/>
+          <div class="humidity-wind-scape">
+            <h3>Wind</h3>
+            <p class="wind">
+              <span class="wind-value">10</span>km/h
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  </body>
+</html>
