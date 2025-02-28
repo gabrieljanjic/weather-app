@@ -59,14 +59,16 @@ const getForecastData = function (city) {
   fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey2}&units=metric`)
     .then((response) => response.json())
     .then((data2) => {
-      console.log(data2);
+      /*console.log(data2);*/
       if (data2.cod === "404") {
         forecastContainer.classList.add("hidden");
         return;
       } else {
         //Filer results
-        const filteredListOfDaysDay = data2.list.filter((entry) => entry.dt_txt.includes("12:00:00")).slice(0, 4);
+        const filteredListOfDaysDay = data2.list.filter((entry) => entry.dt_txt.includes("15:00:00")).slice(0, 4);
         const filteredListOfDaysNight = data2.list.filter((entry) => entry.dt_txt.includes("06:00:00")).slice(0, 4);
+        console.log(filteredListOfDaysDay);
+        console.log(filteredListOfDaysNight);
         //Days od week
         const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         //Getting api
