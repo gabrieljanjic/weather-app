@@ -20,8 +20,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 90%;
-  margin: 0 auto;
-  margin-top: 3rem;
+  margin: 3rem auto 3rem;
   padding: 1rem 2rem;
   border-radius: 1rem;
   background-color: #fff;
@@ -75,7 +74,7 @@ input:focus {
   background-color: #e9ecef;
 }
 .city {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-top: 4rem;
 }
 
@@ -114,19 +113,54 @@ h3 {
   font-size: 1.8rem;
 }
 
+/*Forecast*/
+.forecast-div {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.day-of-week {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.forecast-img {
+  width: 7rem;
+}
+.each-day-temperature {
+  margin-top: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+}
+
 .hidden {
   display: none;
 }
-
-@media (max-width: 41rem) {
+.gray {
+  color: #666;
+}
+@media (max-width: 56rem) {
+  .forecast-div {
+    gap: 1rem;
+  }
+}
+@media (max-width: 49rem) {
+  .forecast-div {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+  }
+  .day-of-week {
+    margin: 2rem auto 0;
+  }
+}
+@media (max-width: 42rem) {
   html {
     font-size: 87.5%;
   }
-}
-@media (max-width: 36rem) {
-  html {
-    font-size: 75%;
-  }
+
   .weather-info {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -138,13 +172,14 @@ h3 {
     display: none;
   }
 }
+
 @media (max-width: 32rem) {
   html {
-    font-size: 62.5%;
+    font-size: 75%;
   }
 }
-@media (max-width: 24rem) {
+@media (max-width: 27rem) {
   html {
-    font-size: 50%;
+    font-size: 62.5%;
   }
 }
